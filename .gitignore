@@ -1,0 +1,114 @@
+# ============================================
+# Python
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+*.whl
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_metadata/
+
+# ============================================
+# ML / Data
+# ============================================
+# Raw datasets (large files — download separately)
+ml/data/raw/*.mat
+ml/data/raw/*.csv
+ml/data/raw/*.zip
+ml/data/raw/*.tar.gz
+ml/data/raw/*.h5
+ml/data/raw/*.hdf5
+ml/data/raw/**/*.mat
+ml/data/raw/**/*.csv
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# Model weights (track only final release models)
+ml/saved_models/*.h5
+ml/saved_models/*.keras
+ml/saved_models/*.pkl
+ml/saved_models/*.joblib
+ml/saved_models/*.pt
+!ml/saved_models/.gitkeep
+
+# Wandb
+wandb/
+
+# ============================================
+# C++ / PlatformIO (Firmware)
+# ============================================
+firmware/.pio/
+firmware/.vscode/
+firmware/lib/README
+
+# ============================================
+# Node.js / React Native
+# ============================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.expo/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+
+# ============================================
+# Flutter / Dart
+# ============================================
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+*.iml
+
+# ============================================
+# IDE
+# ============================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ============================================
+# Environment / Secrets
+# ============================================
+.env
+.env.local
+.env.production
+*.pem
+secrets/
+
+# ============================================
+# Docker
+# ============================================
+docker-compose.override.yml
+
+# ============================================
+# OS
+# ============================================
+.DS_Store
+Thumbs.db
+desktop.ini
