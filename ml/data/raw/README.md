@@ -12,7 +12,7 @@ This directory stores raw battery aging datasets. **These files are gitignored**
 - **Download & extract:**
   ```bash
   # Download and place in this directory
-  unzip BatteryAgingARC.zip -d nasa_pcoe/
+  unzip BatteryAgingARC.zip -d BatteryAgingARC-FY08Q4/
   ```
 
 ### 2. Oxford Battery Degradation Dataset (Cross-validation)
@@ -38,7 +38,7 @@ This directory stores raw battery aging datasets. **These files are gitignored**
 ```
 ml/data/raw/
 ├── README.md          (this file)
-├── nasa_pcoe/
+├── BatteryAgingARC-FY08Q4/
 │   ├── B0005.mat
 │   ├── B0006.mat
 │   ├── B0007.mat

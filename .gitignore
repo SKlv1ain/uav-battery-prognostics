@@ -37,13 +37,15 @@ ml/data/raw/**/*.csv
 # MLflow
 mlruns/
 mlartifacts/
+mlflow.db
 
 # Model weights (track only final release models)
-ml/saved_models/*.h5
-ml/saved_models/*.keras
-ml/saved_models/*.pkl
-ml/saved_models/*.joblib
-ml/saved_models/*.pt
+ml/saved_models/**/*.h5
+ml/saved_models/**/*.keras
+ml/saved_models/**/*.pkl
+ml/saved_models/**/*.joblib
+ml/saved_models/**/*.pt
+ml/saved_models/**/config.json
 !ml/saved_models/.gitkeep
 
 # Wandb
