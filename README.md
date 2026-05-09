@@ -5,7 +5,7 @@ Predicts **SOH** (State of Health), **RUL** (Remaining Useful Life), and **Multi
 
 ## Team
 
-- **Sai Khun Main** (Meen)
+- **Sai Khun Main**
 - **Peerawat Theerasakul**
 
 **Advisor:** Asst. Prof. Dr. Supaporn Erjongmanee  
