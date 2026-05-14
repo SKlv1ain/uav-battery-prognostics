@@ -4,15 +4,21 @@ from pydantic import BaseModel, Field
 
 class SingleCycleRequest(BaseModel):
     battery_id: int = Field(..., description="Battery ID number (e.g. 5 → B0005)", examples=[5])
+    eol_threshold_soh: float = Field(70.0, description="End of life threshold as SOH % (e.g. 70.0)")
+    target_cycle: Optional[int] = Field(None, description="The cycle to calculate RUL from (defaults to the last known cycle or 0)")
 
 
 class MultiCycleRequest(BaseModel):
     battery_id: int = Field(..., description="Battery ID number (e.g. 5 → B0005)", examples=[5])
+    eol_threshold_soh: float = Field(70.0, description="End of life threshold as SOH % (e.g. 70.0)")
+    target_cycle: Optional[int] = Field(None, description="The cycle to calculate RUL from (defaults to the last known cycle or 0)")
 
 
 class AutoPredictRequest(BaseModel):
     battery_id: int = Field(..., description="Battery ID number (e.g. 5 → B0005)", examples=[5])
     window_size: int = Field(15, description="Minimum cycles required to use multi-cycle pipeline")
+    eol_threshold_soh: float = Field(70.0, description="End of life threshold as SOH % (e.g. 70.0)")
+    target_cycle: Optional[int] = Field(None, description="The cycle to calculate RUL from (defaults to the last known cycle or 0)")
 
 
 class RULResult(BaseModel):
