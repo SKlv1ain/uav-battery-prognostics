@@ -18,7 +18,13 @@ def predict_single_cycle(body: SingleCycleRequest, request: Request):
     if bundle is None:
         raise HTTPException(status_code=503, detail="Single-cycle model not loaded")
     try:
-        return run_single_cycle(body.battery_id, request.app.state.data_dir, bundle)
+        return run_single_cycle(
+            body.battery_id, 
+            request.app.state.data_dir, 
+            bundle, 
+            body.eol_threshold_soh, 
+            body.target_cycle
+        )
     except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc))
 
@@ -30,7 +36,13 @@ def predict_multi_cycle(body: MultiCycleRequest, request: Request):
     if bundle is None:
         raise HTTPException(status_code=503, detail="Multi-cycle model not loaded")
     try:
-        return run_multi_cycle(body.battery_id, request.app.state.data_dir, bundle)
+        return run_multi_cycle(
+            body.battery_id, 
+            request.app.state.data_dir, 
+            bundle, 
+            body.eol_threshold_soh, 
+            body.target_cycle
+        )
     except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc))
 
@@ -47,6 +59,8 @@ def predict_auto(body: AutoPredictRequest, request: Request):
             request.app.state.multi_bundle,
             request.app.state.single_bundle,
             body.window_size,
+            body.eol_threshold_soh,
+            body.target_cycle,
         )
     except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc))
