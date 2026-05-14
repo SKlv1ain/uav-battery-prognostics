@@ -1,0 +1,1 @@
+{"n_timesteps": 1000, "channels": ["Voltage_measured", "Current_measured", "Temperature_measured"]}
