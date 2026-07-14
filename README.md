@@ -38,8 +38,8 @@ uav-battery-prognostics/
 │   ├── src/           # Preprocessing, models, training, evaluation
 │   ├── configs/       # Hyperparameter YAML files
 │   └── saved_models/  # Exported model weights
-├── backend/           # FastAPI backend
-├── mobile/            # Mobile dashboard (React Native / Flutter)
+├── backend/           # FastAPI backend (REST API)
+├── ui/                # Streamlit dashboard
 └── docs/              # SRS, architecture diagrams, reports
 ```
 
@@ -73,7 +73,7 @@ See individual README files in each subdirectory for setup instructions:
 - [`firmware/README.md`](firmware/README.md) — Hardware setup
 - [`ml/README.md`](ml/README.md) — ML pipeline setup
 - [`backend/README.md`](backend/README.md) — Backend API setup
-- [`mobile/README.md`](mobile/README.md) — Mobile app setup
+- [`ui/`](ui/) — Streamlit dashboard
 
 ## License
 
